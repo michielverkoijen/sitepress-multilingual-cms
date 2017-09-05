@@ -175,7 +175,7 @@ class WPML_LS_Settings {
 		);
 
 		$shortcode_actions = array(
-			'show'                          => 1,
+			'show'                          => 0,
 			'display_names_in_current_lang' => 1,
 			'template'                      => $core_templates['list-horizontal'],
 			'slot_group'                    => 'statics',
