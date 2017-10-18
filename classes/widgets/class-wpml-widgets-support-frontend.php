@@ -19,16 +19,16 @@ class WPML_Widgets_Support_Frontend implements IWPML_Action {
 	}
 
 	public function add_hooks() {
-		add_filter( 'widget_display_callback', array( $this, 'display' ), 10, 1 );
+		add_filter( 'widget_display_callback', array( $this, 'display' ), -PHP_INT_MAX, 1 );
 	}
 
 	/**
-	 * @param array $instance
+	 * @param array|bool $instance
 	 *
-	 * @return bool|array
+	 * @return array|bool
 	 */
 	public function display( $instance ) {
-		if ( $this->it_must_display( $instance ) ) {
+		if ( (bool) $instance && $this->it_must_display( $instance ) ) {
 			return $instance;
 		}
 
