@@ -50,7 +50,7 @@ class WPML_Post_Status_Display {
 		return $this->render_status_icon( $link, $text, $icon );
 	}
 
-	private function get_status_data( $post_id, $lang ) {
+	public function get_status_data( $post_id, $lang ) {
 		global $wpml_post_translations;
 
 		$status_helper        = wpml_get_post_status_helper ();
