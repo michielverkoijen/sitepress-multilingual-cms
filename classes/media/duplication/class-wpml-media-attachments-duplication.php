@@ -369,6 +369,7 @@ class WPML_Media_Attachments_Duplication {
 			}
 
 			$this->attachments_model->duplicate_post_meta_data( $attachment_id, $duplicated_attachment_id );
+			do_action( 'wpml_after_duplicate_attachment', $attachment_id, $duplicated_attachment_id );
 
 			return $duplicated_attachment_id;
 		} catch ( WPML_Media_Exception $e ) {
